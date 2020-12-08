@@ -1,0 +1,10 @@
+Q1
+if we needed to do this by hand it would been thaken us 
+much more time. instad of a few seconds it would take us around an hour.
+Q2
+we can use this program for our use for example find resouces for research. we can add to the program by grep to bring back also commection to the all text.
+our conclution is that we can use bash to be more efficient.
+Q3
+if we want to do this evrey hour we need to change our code 
+1. we need to delete the file 3082 in the end of the run.
+2. use again 
