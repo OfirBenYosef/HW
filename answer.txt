@@ -7,4 +7,6 @@ our conclution is that we can use bash to be more efficient.
 Q3
 if we want to do this evrey hour we need to change our code 
 1. we need to delete the file 3082 in the end of the run.
-2. use again 
+2. use again wgen and find all the links and sort them
+3. use wget -nc to download only the new links
+4. use grep -v to find "Netanyahu" and "Gantz" only in the new files.
