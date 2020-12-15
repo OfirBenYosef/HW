@@ -1,10 +1,11 @@
 #!/bin/bash
-
+# define LENGTH as the lenght of the articales links
+(( LENGTH=42 ))
 
 # Find all the articles which fits to the instructions, 
 # and make sure that there is only a single copy of each.
 wget https://www.ynetnews.com/category/3082
-grep -i -o -E 'https://www.ynetnews.com/article/[a-zA-Z0-9]{9}["|#]' 3082                         \
+grep -i -o -E 'https://www.ynetnews.com/article/[a-zA-Z0-9]{9}["|#]' 3082 \                        \
 | cat > art.txt
 awk -F '"|#' '{print $1}' art.txt | cat > cart1.txt
 sort cart1.txt | uniq | cat > cart.txt
@@ -48,7 +49,7 @@ awk '{print $1", -"}' cart.txt | cat > all.txt
 cat cart3.txt >> all.txt
 
 # Put in a new file all the articles whith the information we needed 
-sort all.txt | uniq -u -w 42 | cat > results.txt
+sort all.txt | uniq -u -w $LENGTH | cat > results.txt
 cat cart3.txt >> results.txt
 
 # Find the number of articles we have checked
